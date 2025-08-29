@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fayette</title>
+	<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+	<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+
+<body>
+<script type="py" src="main2.py"></script> 
+<!--This is a comment-->
+
+<div class="Home"><center>
+	<h1><span id="restaurant_name" style="color: burlywood; font-family: Consolas;">Fayette</span></h1>
+    <h4 id="owner_name" style="color: burlywood; font-family: Consolas;">Owner: Annika Francisco</h4>
+    <h4 style="color: burlywood; font-family: Consolas;">Cafe Menu</h4>
+
+<style>
+	body{
+	background-image:url('https://c8.alamy.com/zooms/6/ea64a99cddb44ef3916ef37c54428376/a12hf4.jpg');
+	background-repeat: no repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    }
+ h1{
+    background-color:beige
+ }
+ h4{
+    background-color: beige;
+ }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 140px;
+      background-color: aliceblue;
+      background-size: cover;
+    }
+    .image {
+      max-width: 50%;
+      padding: 10px;
+    }
+    .image {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .content {
+      max-width: 50%;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .content {
+        padding: 40px;
+    }
+  </style>
+
+<div class="container">
+  <div class="content">
+    <h1>Menu Pricelist</h1>
+    <div class="Menulist">
+      <h2>Product Name - Price(₱)</h2>
+      
+      <ul id="menu_list"></ul>
+    </div>
+
+    <div class="footer">
+      <h2 id="hours" style="color: burlywood;">Opening Hours</h2>
+      <p id="delivery"></p>
+      <p id="allergens"></p>
+      <p id="tax"></p>
+    </div>
+  </div>
+
+  <section id="Contact" class="mt-5">
+    <h2>Contact Information</h2>
+    <p>Email: restaurantfayette@gmail.com</p>
+    <p>Phone: +0xxxxxxxxx</p>
+  </section>
+
+  <footer class="bg-secondary text-white text-center p-3 mt-5">
+    <p> Submitted by Annika Francisco</p>
+  </footer>
+</div></center>
+</body>
+</html>
