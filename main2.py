@@ -1,35 +1,46 @@
-restaurant_name = "Fayette"              
-owner_name = "Annika Francisco"           
-year_established = 2025                   
-popular_item_price = 100.0               
-has_delivery = True                     
-product_names = ["Carbonara", "French Toast", "Barbecue"]  
-business_hours = {"open": "9:00 AM", "close": "9:00 PM"}   
-menu_prices = {                           
-    "Carbonara": 100,
-    "French Toast": 130,
-    "Barbecue": 99,
-    "Braised Chicken": 210,
-    "Beef Stew": 230
+from pyscript import display
+
+# String
+restaurant_name = "Fayette"
+
+# String
+owner_name = "Annika Francisco"
+
+# Integer (year)
+year_established = 2025
+
+# String (peso with symbol)
+popular_item_price = "₱100"
+
+# Boolean
+has_delivery = True
+
+# List of Strings
+product_names = ["Carbonara", "French Toast", "Barbecue"]
+
+# String
+business_hours = "9:00 AM to 9:00 PM"
+
+# Dictionary
+menu_prices = {
+    "Carbonara": "₱100",
+    "French Toast": "₱130",
+    "Barbecue": "₱99",
+    "Braised Chicken": "₱210",
+    "Beef Stew": "₱230"
 }
-common_allergens = ["Peanuts", "Dairy", "Gluten"]  
-tax_rate = 0.12                         
 
-from js import document
+# List of Strings
+common_allergens = ["Peanuts", "Dairy", "Gluten"]
 
+# Float
+tax_rate = 0.12
 
-document.querySelector("#restaurant_name").innerHTML = restaurant_name
-document.querySelector("#owner_name").innerHTML = f"Owner: {owner_name} (Since {year_established})"
-
-
-menu_list = document.querySelector("#menu_list")
-menu_list.innerHTML = ""  # clear
-for item, price in menu_prices.items():
-    li = document.createElement("li")
-    li.textContent = f"{item} - ₱{price}"
-    menu_list.appendChild(li)
-
-document.querySelector("#hours").innerHTML = f"Opening Hours: {business_hours['open']} to {business_hours['close']}"
-document.querySelector("#delivery").innerHTML = "Delivery Available" if has_delivery else "No Delivery"
-document.querySelector("#allergens").innerHTML = "Allergens: " + ", ".join(common_allergens)
-document.querySelector("#tax").innerHTML = f"Tax Rate: {tax_rate*100:.0f}%"
+# Display at least 5 data
+display("<h2>Welcome to " + restaurant_name + "!</h2>")
+display("<p><b>Owner:</b> " + owner_name + "</p>")
+display("<p><b>Established:</b> " + str(year_established) + "</p>")
+display("<p><b>Popular Item Price:</b> " + popular_item_price + "</p>")
+display("<p><b>Business Hours:</b> " + business_hours + "</p>")
+display("<p><b>Has Delivery?</b> " + str(has_delivery) + "</p>")
+display("<p><b>Common Allergens:</b> " + ", ".join(common_allergens) + "</p>")
